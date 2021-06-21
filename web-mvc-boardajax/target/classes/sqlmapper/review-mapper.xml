@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ReviewDAO">
+
+	<select id="getReview" parameterType="review"
+		resultType="review">
+		select * from review where rno=#{rno}
+	</select>
+	
+	<select id="getReviewList" parameterType="review"
+		resultType="review">
+		select * from review where bno=#{bno} order by rno asc
+	</select>
+	
+	<insert id="insertReview">
+	INSERT INTO review (rno, bno, uno, comment, name)
+	VALUES((SELECT COALESCE(max(rno),0)+1 FROM review a), #{bno}, #{uno}, #{comment}, #{name})
+	</insert>
+
+	<update id="updateReview">
+	update review set comment=#{comment}, fileName=#{fileName} where rno=#{rno}
+	</update>
+
+	<delete id="deleteReview">
+	delete from review where rno=#{rno}
+	</delete>
+
+</mapper>

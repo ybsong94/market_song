@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CartDAO">
+
+	<select id="getCart" parameterType="cart"
+		resultType="cart">
+		select * from cart where cartNo=#{cartNo} and uno=#{uno}
+	</select>
+	
+	<select id="getCartList" parameterType="cart"
+		resultType="cart">
+		select * from cart where uno=#{uno} order by cartNo desc
+	</select>
+	
+	<insert id="insertCart">
+		insert into cart(cartNo, uno, bno, price ,shipment, stock)
+			values((select COALESCE(max(cartNo),0)+1 from cart a),${uno},#{bno},#{price}, #{shipment}, #{stock})
+	</insert>
+
+	<update id="updateCart">
+		update cart set stock=#{stock} where cartNo=#{cartNo}
+	</update>
+
+	<delete id="deleteCart">
+		delete from cart where cartNo=#{cartNo} and uno=#{uno}
+	</delete>
+
+	<select id="getCartCount"
+		resultType="int">
+		select count(cartNo) from cart where uno=#{uno}
+	</select>
+
+</mapper>

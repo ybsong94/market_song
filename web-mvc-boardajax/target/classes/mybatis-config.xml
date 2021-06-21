@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	
+<!-- 필요하면 사용하는애 alias는 별명 -->
+	<typeAliases>
+		<typeAlias type="com.spring.web.vo.BoardVO" alias="board"/>
+		<typeAlias type="com.spring.web.vo.UserVO" alias="user"/>
+		<typeAlias type="com.spring.web.vo.CartVO" alias="cart"/>
+		<typeAlias type="com.spring.web.vo.OrderVO" alias="order"/>
+		<typeAlias type="com.spring.web.vo.ReviewVO" alias="review"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="sqlmapper/board-mapper.xml"/>
+		<mapper resource="sqlmapper/user-mapper.xml"/>
+		<mapper resource="sqlmapper/cart-mapper.xml"/>
+		<mapper resource="sqlmapper/order-mapper.xml"/>
+		<mapper resource="sqlmapper/review-mapper.xml"/>
+	</mappers>
+</configuration>
