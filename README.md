@@ -139,5 +139,13 @@
 * 수량변경
   * 비동기 처리(Ajax)를 통해 전체 페이지가 로딩되지 않게 구현
 * 삭제하기
-* 
 <img width="1438" alt="GetCartList.jsp" src="https://user-images.githubusercontent.com/86213046/128489201-308d035f-b414-4e1a-8526-d9b8f3c15faf.png">
+
+## 아쉬운 점
+1. 관리자, 사용자의 접근 권한이 구분없다(관리자 페이지 구현 X)
+<br> -> spring security로 구현 가능한 코드 찾아 적용해보자
+
+2. Open API 활용을 하지 못했다
+<br> -> 로그인, 회원가입 시 소셜 계정 연동
+<br> -> 결제 API를 통한 결제기능 구현
+<br> -> 지도 API를 통한 배송지 선택
