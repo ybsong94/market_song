@@ -17,53 +17,53 @@
 * 페이징
 * 초기 VO구성
   > UserVo
-    * user_no pk
-    * user_id
-    * user_password
-    * user_name
-    * user_email
-    * user_role
-    * user_regDate
+  > * user_no pk
+  > * user_id
+  > * user_password
+  > * user_name
+  > * user_email
+  > * user_role
+  > * user_regDate
 
   > BoardVO
-    * board_no pk
-    * board_title
-    * board_content
-    * board_startDate
-    * board_endDate
-    * board_count
-    * searchType
-    * searchKeyword
-    * uploadFile
-    * startList
-    * listSize
-    * seller_id fk
+  > * board_no pk
+  > * board_title
+  > * board_content
+  > * board_startDate
+  > * board_endDate
+  > * board_count
+  > * searchType
+  > * searchKeyword
+  > * uploadFile
+  > * startList
+  > * listSize
+  > * seller_id fk
 
   > SellerVO
-    * seller_no
-    * seller_id pk
-    * seller_password
-    * seller_name
-    * seller_email
-    * seller_tel
-    * seller_regDate
+  > * seller_no
+  > * seller_id pk
+  > * seller_password
+  > * seller_name
+  > * seller_email
+  > * seller_tel
+  > * seller_regDate
 
   > User_BoardVO
-    * user_no fk
-    * board_no fk
+  > * user_no fk
+  > * board_no fk
 
   > PageVO
-    * listSize
-    * rangeSize
-    * page
-    * range
-    * listCnt
-    * pageCnt
-    * startPage
-    * startList
-    * endPage
-    * boolean prev
-    * boolean next
+  > * listSize
+  > * rangeSize
+  > * page
+  > * range
+  > * listCnt
+  > * pageCnt
+  > * startPage
+  > * startList
+  > * endPage
+  > * boolean prev
+  > * boolean next
 
 ## Environment
 
